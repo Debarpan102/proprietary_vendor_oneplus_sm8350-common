@@ -6079,7 +6079,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.alarm@1.0-impl",
+    name: "vendor.qti.hardware.alarm-impl",
     owner: "oneplus",
     strip: {
         none: true,
@@ -6087,16 +6087,17 @@ cc_prebuilt_library_shared {
     target: {
         android_arm64: {
             srcs: [
-                "proprietary/vendor/lib64/hw/vendor.qti.hardware.alarm@1.0-impl.so",
+                "proprietary/vendor/lib64/hw/vendor.qti.hardware.alarm-impl.so",
             ],
             shared_libs: [
-                "libhidlbase",
                 "libutils",
                 "liblog",
                 "libcutils",
                 "libhardware",
                 "libbase",
-                "vendor.qti.hardware.alarm@1.0",
+                "vendor.qti.hardware.alarm-V1-ndk",
+                "libbinder",
+                "libbinder_ndk",
                 "libc++",
                 "libc",
                 "libm",
@@ -11500,7 +11501,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.alarm@1.0",
+    name: "vendor.qti.hardware.alarm-V1-ndk",
     owner: "oneplus",
     strip: {
         none: true,
@@ -11508,13 +11509,10 @@ cc_prebuilt_library_shared {
     target: {
         android_arm64: {
             srcs: [
-                "proprietary/vendor/lib64/vendor.qti.hardware.alarm@1.0.so",
+                "proprietary/vendor/lib64/vendor.qti.hardware.alarm-V1-ndk.so",
             ],
             shared_libs: [
-                "libhidlbase",
-                "liblog",
-                "libutils",
-                "libcutils",
+                "libbinder_ndk",
                 "libc++",
                 "libc",
                 "libm",
@@ -16684,17 +16682,6 @@ android_app_import {
 }
 
 android_app_import {
-    name: "PowerOffAlarm",
-    owner: "oneplus",
-    apk: "proprietary/product/app/PowerOffAlarm/PowerOffAlarm.apk",
-    certificate: "platform",
-    dex_preopt: {
-        enabled: false,
-    },
-    product_specific: true,
-}
-
-android_app_import {
     name: "HotwordEnrollmentOKGoogle",
     owner: "oneplus",
     apk: "proprietary/product/priv-app/HotwordEnrollmentOKGoogle/HotwordEnrollmentOKGoogle.apk",
@@ -16722,6 +16709,17 @@ android_app_import {
     name: "ImsRcsService",
     owner: "oneplus",
     apk: "proprietary/system_ext/app/ImsRcsService/ImsRcsService.apk",
+    certificate: "platform",
+    dex_preopt: {
+        enabled: false,
+    },
+    system_ext_specific: true,
+}
+
+android_app_import {
+    name: "PowerOffAlarm",
+    owner: "oneplus",
+    apk: "proprietary/system_ext/app/PowerOffAlarm/PowerOffAlarm.apk",
     certificate: "platform",
     dex_preopt: {
         enabled: false,
@@ -16828,15 +16826,6 @@ dex_import {
     owner: "oneplus",
     jars: [
         "proprietary/system_ext/framework/qcrilhook.jar",
-    ],
-    system_ext_specific: true,
-}
-
-dex_import {
-    name: "vendor.qti.hardware.alarm-V1.0-java",
-    owner: "oneplus",
-    jars: [
-        "proprietary/system_ext/framework/vendor.qti.hardware.alarm-V1.0-java.jar",
     ],
     system_ext_specific: true,
 }
@@ -16998,6 +16987,15 @@ prebuilt_etc_xml {
     name: "vendor.qti.gnss@4.0-service.xml",
     owner: "oneplus",
     src: "proprietary/vendor/etc/vintf/manifest/vendor.qti.gnss@4.0-service.xml",
+    filename_from_src: true,
+    sub_dir: "vintf/manifest",
+    soc_specific: true,
+}
+
+prebuilt_etc_xml {
+    name: "vendor.qti.hardware.alarm.xml",
+    owner: "oneplus",
+    src: "proprietary/vendor/etc/vintf/manifest/vendor.qti.hardware.alarm.xml",
     filename_from_src: true,
     sub_dir: "vintf/manifest",
     soc_specific: true,
@@ -17561,21 +17559,25 @@ cc_prebuilt_binary {
 }
 
 cc_prebuilt_binary {
-    name: "vendor.qti.hardware.alarm@1.0-service",
+    name: "vendor.qti.hardware.alarm-service",
     owner: "oneplus",
     target: {
         android_arm64: {
             srcs: [
-                "proprietary/vendor/bin/hw/vendor.qti.hardware.alarm@1.0-service",
+                "proprietary/vendor/bin/hw/vendor.qti.hardware.alarm-service",
             ],
             shared_libs: [
                 "liblog",
                 "libcutils",
                 "libbase",
                 "libutils",
+                "libbinder",
                 "libhardware",
                 "libhidlbase",
-                "vendor.qti.hardware.alarm@1.0",
+                "libbinder_ndk",
+                "libavservices_minijail",
+                "vendor.qti.hardware.alarm-impl",
+                "vendor.qti.hardware.alarm-V1-ndk",
                 "libc++",
                 "libc",
                 "libm",

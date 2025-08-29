@@ -581,7 +581,7 @@ PRODUCT_COPY_FILES += \
     vendor/oneplus/sm8350-common/proprietary/vendor/etc/init/vendor.qti.adsprpc-guestos-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.adsprpc-guestos-service.rc \
     vendor/oneplus/sm8350-common/proprietary/vendor/etc/init/vendor.qti.cdsprpc-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.cdsprpc-service.rc \
     vendor/oneplus/sm8350-common/proprietary/vendor/etc/init/vendor.qti.diag.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.diag.rc \
-    vendor/oneplus/sm8350-common/proprietary/vendor/etc/init/vendor.qti.hardware.alarm@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.alarm@1.0-service.rc \
+    vendor/oneplus/sm8350-common/proprietary/vendor/etc/init/vendor.qti.hardware.alarm-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.alarm-service.rc \
     vendor/oneplus/sm8350-common/proprietary/vendor/etc/init/vendor.qti.hardware.capabilityconfigstore@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.capabilityconfigstore@1.0-service.rc \
     vendor/oneplus/sm8350-common/proprietary/vendor/etc/init/vendor.qti.hardware.charger_monitor@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.charger_monitor@1.0-service.rc \
     vendor/oneplus/sm8350-common/proprietary/vendor/etc/init/vendor.qti.hardware.dsp@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.dsp@1.0-service.rc \
@@ -921,7 +921,7 @@ PRODUCT_PACKAGES += \
     android.hardware.gnss@2.1-impl-qti \
     com.dsi.ant@1.0-impl \
     vendor.qti.gnss@4.0-impl \
-    vendor.qti.hardware.alarm@1.0-impl \
+    vendor.qti.hardware.alarm-impl \
     vendor.qti.hardware.qseecom@1.0-impl \
     vendor.qti.hardware.qteeconnector@1.0-impl \
     vendor.qti.hardware.sensorscalibrate@1.0-impl \
@@ -1097,7 +1097,7 @@ PRODUCT_PACKAGES += \
     vendor.qti.gnss@3.0 \
     vendor.qti.gnss@4.0-service \
     vendor.qti.gnss@4.0 \
-    vendor.qti.hardware.alarm@1.0 \
+    vendor.qti.hardware.alarm-V1-ndk \
     vendor.qti.hardware.cacert@1.0 \
     vendor.qti.hardware.cvp@1.0 \
     vendor.qti.hardware.data.cne.internal.api@1.0 \
@@ -1283,10 +1283,10 @@ PRODUCT_PACKAGES += \
     CneApp \
     IWlanService \
     TimeService \
-    PowerOffAlarm \
     HotwordEnrollmentOKGoogle \
     HotwordEnrollmentXGoogle \
     ImsRcsService \
+    PowerOffAlarm \
     QtiTelephonyService \
     WfdService \
     dpmserviceapp \
@@ -1297,7 +1297,6 @@ PRODUCT_PACKAGES += \
     com.qti.dpmframework \
     dpmapi \
     qcrilhook \
-    vendor.qti.hardware.alarm-V1.0-java \
     vendor.qti.ims.connection-V1.0-java \
     vendor.qti.ims.connectionaidlservice-V1-java \
     vendor.qti.ims.datachannelservice-V1-java \
@@ -1316,6 +1315,7 @@ PRODUCT_PACKAGES += \
     android.hardware.gnss@2.1-service-qti.xml \
     c2_manifest_vendor.xml \
     vendor.qti.gnss@4.0-service.xml \
+    vendor.qti.hardware.alarm.xml \
     vendor.qti.hardware.servicetracker@1.2-service.xml \
     manifest_android.hardware.drm@1.3-service.widevine.xml \
     adpl \
@@ -1334,7 +1334,7 @@ PRODUCT_PACKAGES += \
     qconfigservice \
     qcrilNrd \
     vendor.display.color@1.0-service \
-    vendor.qti.hardware.alarm@1.0-service \
+    vendor.qti.hardware.alarm-service \
     vendor.qti.hardware.capabilityconfigstore@1.0-service \
     vendor.qti.hardware.perf@2.2-service \
     vendor.qti.hardware.qseecom@1.0-service \
