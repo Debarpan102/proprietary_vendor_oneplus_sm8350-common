@@ -14278,49 +14278,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libmmparser_lite",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm: {
-            srcs: [
-                "proprietary/system_ext/lib/libmmparser_lite.so",
-            ],
-            shared_libs: [
-                "libutils",
-                "libcutils",
-                "liblog",
-                "libmmosal",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-        android_arm64: {
-            srcs: [
-                "proprietary/system_ext/lib64/libmmparser_lite.so",
-            ],
-            shared_libs: [
-                "libutils",
-                "libcutils",
-                "liblog",
-                "libmmosal",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "both",
-    prefer: true,
-    system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "libmmrtpdecoder",
     owner: "oneplus",
     strip: {
@@ -14940,6 +14897,8 @@ cc_prebuilt_library_shared {
                 "libmmosal",
                 "libutils",
                 "liblog",
+                "libcutils",
+                "libwfdconfigutils",
                 "libc++",
                 "libc",
                 "libm",
@@ -14954,6 +14913,8 @@ cc_prebuilt_library_shared {
                 "libmmosal",
                 "libutils",
                 "liblog",
+                "libcutils",
+                "libwfdconfigutils",
                 "libc++",
                 "libc",
                 "libm",
@@ -15157,7 +15118,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "com.qualcomm.qti.wifidisplayhal@1.0",
+    name: "libmmparser_lite",
     owner: "oneplus",
     strip: {
         none: true,
@@ -15165,13 +15126,13 @@ cc_prebuilt_library_shared {
     target: {
         android_arm: {
             srcs: [
-                "proprietary/system_ext/lib/com.qualcomm.qti.wifidisplayhal@1.0.so",
+                "proprietary/system_ext/lib/libmmparser_lite.so",
             ],
             shared_libs: [
-                "libhidlbase",
-                "liblog",
                 "libutils",
                 "libcutils",
+                "liblog",
+                "libmmosal",
                 "libc++",
                 "libc",
                 "libm",
@@ -15245,6 +15206,10 @@ cc_prebuilt_library_shared {
                 "libhidlbase",
                 "libgralloctypes",
                 "android.hardware.graphics.mapper@4.0",
+                "libvndksupport",
+                "android.hardware.graphics.allocator@4.0",
+                "android.hardware.graphics.allocator-V2-ndk",
+                "libbinder_ndk",
                 "libc++",
                 "libc",
                 "libm",
@@ -15290,6 +15255,8 @@ cc_prebuilt_library_shared {
                 "libwfdavenhancements",
                 "libhidlbase",
                 "vendor.qti.hardware.wifidisplaysession@1.0",
+                "vendor.qti.hardware.wifidisplaysession_aidl-V1-ndk",
+                "libbinder_ndk",
                 "libc++",
                 "libc",
                 "libm",
@@ -15416,7 +15383,7 @@ cc_prebuilt_library_shared {
                 "vendor.qti.imsrtpservice@3.1",
                 "libbinder",
                 "libbinder_ndk",
-                "vendor.qti.ImsRtpService-V1-ndk",
+                "vendor.qti.ImsRtpService-V2-ndk",
                 "libdiag_system",
                 "libcutils",
                 "libutils",
@@ -15725,14 +15692,14 @@ cc_prebuilt_library_shared {
                 "libandroid_runtime",
                 "libui",
                 "libinput",
-                "libbinder",
-                "libgui",
                 "libnativehelper",
                 "libutils",
                 "liblog",
                 "libwfdclient",
                 "libhidlbase",
                 "libhidlmemory",
+                "libbinder",
+                "libgui",
                 "libhidlbase",
                 "android.hidl.token@1.0-utils",
                 "android.hardware.graphics.common@1.0",
