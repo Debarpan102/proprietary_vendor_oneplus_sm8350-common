@@ -360,6 +360,7 @@ PRODUCT_COPY_FILES += \
     vendor/oneplus/sm8350-common/proprietary/odm/firmware/awinic_haptic_gun_params.bin:$(TARGET_COPY_OUT_ODM)/firmware/awinic_haptic_gun_params.bin \
     vendor/oneplus/sm8350-common/proprietary/odm/firmware/awinic_haptic_params.bin:$(TARGET_COPY_OUT_ODM)/firmware/awinic_haptic_params.bin \
     vendor/oneplus/sm8350-common/proprietary/odm/firmware/fastchg/bms_heating_config.txt:$(TARGET_COPY_OUT_ODM)/firmware/fastchg/bms_heating_config.txt \
+    vendor/oneplus/sm8350-common/proprietary/odm/firmware/fastchg/charge_time_config.csv:$(TARGET_COPY_OUT_ODM)/firmware/fastchg/charge_time_config.csv \
     vendor/oneplus/sm8350-common/proprietary/odm/firmware/fastchg/charging_thermal_config_default.txt:$(TARGET_COPY_OUT_ODM)/firmware/fastchg/charging_thermal_config_default.txt \
     vendor/oneplus/sm8350-common/proprietary/odm/firmware/fastchg/smart_chg_config_table.txt:$(TARGET_COPY_OUT_ODM)/firmware/fastchg/smart_chg_config_table.txt \
     vendor/oneplus/sm8350-common/proprietary/odm/firmware/nature_170HZ.bin:$(TARGET_COPY_OUT_ODM)/firmware/nature_170HZ.bin \
