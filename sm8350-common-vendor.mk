@@ -1226,6 +1226,7 @@ PRODUCT_PACKAGES += \
     libvpt_action_recognition \
     libworker_pool \
     libmmosal \
+    libmmparser_lite \
     libmmrtpdecoder \
     libmmrtpencoder \
     libwfdclient \
@@ -1242,7 +1243,6 @@ PRODUCT_PACKAGES += \
     libwfduibcsrc \
     libwfduibcsrcinterface \
     vendor.qti.diaghal@1.0 \
-    libmmparser_lite \
     libwfdavenhancements \
     libwfdmmsrc_system \
     libwfdservice \
