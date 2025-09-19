@@ -1263,6 +1263,7 @@ PRODUCT_PACKAGES += \
     libwfdnative \
     vendor.oplus.hardware.displaypanelfeature@1.0 \
     vendor.qti.ImsRtpService-V1-ndk \
+    vendor.qti.ImsRtpService-V2-ndk \
     vendor.qti.hardware.dpmaidlservice-V1-ndk \
     vendor.qti.hardware.dpmservice@1.0 \
     vendor.qti.ims.datachannelservice-V1-ndk \
