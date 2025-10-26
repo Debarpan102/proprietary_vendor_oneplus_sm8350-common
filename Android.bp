@@ -16368,6 +16368,7 @@ cc_prebuilt_library_shared {
             shared_libs: [
                 "libjsoncpp_shim",
                 "libbase_shim",
+                "libGaia_shim",
                 "vendor.oplus.hardware.olc2-V1-ndk_platform",
                 "liblog",
                 "libcutils",
