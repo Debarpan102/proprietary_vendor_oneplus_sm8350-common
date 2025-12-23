@@ -18406,7 +18406,7 @@ cc_prebuilt_binary {
                 "android.hardware.health@2.0",
                 "libbinder_ndk",
                 "vendor.oplus.hardware.charger-V1-ndk",
-                "libprotobuf-cpp-lite",
+                "libprotobuf-cpp-lite-21.7",
                 "libostatslog",
                 "android.hardware.health-V1-ndk",
                 "vendor.oplus.hardware.displaypanelfeature@1.0",
@@ -18419,7 +18419,6 @@ cc_prebuilt_binary {
         },
     },
     compile_multilib: "64",
-    check_elf_files: false,
     strip: {
         none: true,
     },
